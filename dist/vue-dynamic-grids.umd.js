@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-responsive-grid-layout"] = factory(require("vue"));
+		exports["vue-dynamic-grids"] = factory(require("vue"));
 	else
-		root["vue-responsive-grid-layout"] = factory(root["Vue"]);
+		root["vue-dynamic-grids"] = factory(root["Vue"]);
 })((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -5704,12 +5704,12 @@ var web_dom_iterable = __webpack_require__("ac6a");
 var object_assign = __webpack_require__("5176");
 var assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueGridItem.vue?vue&type=template&id=7a48b4f8&
-var VueGridItemvue_type_template_id_7a48b4f8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.classes,style:(_vm.styles)},[_c('DraggableCore',{class:_vm.dragContainerClass,attrs:{"onStart":_vm.onDragHandler('onDragStart'),"onDrag":_vm.onDragHandler('onDrag'),"onStop":_vm.onDragHandler('onDragStop'),"disabled":!_vm.isDraggable || _vm.immobile,"handle":_vm.handle,"cancel":_vm.cancel,"noTouchAction":_vm.noTouchAction,"touchAction":_vm.touchAction,"draggableCoreProps":_vm.draggableCoreProps}},[(_vm.component)?_c(_vm.component,_vm._b({ref:"component",tag:"div",attrs:{"cols":_vm.cols,"w":_vm.w,"h":_vm.h}},'div',_vm.componentProps,false)):_vm._t("default",null,{"cols":_vm.cols,"w":_vm.w,"h":_vm.h})],2),(_vm.isResizable)?_c('Resizable',{attrs:{"w":_vm.calcWidth(),"h":_vm.calcHeight(),"onResizeStart":_vm.onResizeHandler('onResizeStart'),"onResize":_vm.onResizeHandler('onResize'),"onResizeStop":_vm.onResizeHandler('onResizeStop'),"minConstraints":_vm.minConstraints,"maxConstraints":_vm.maxConstraints,"className":'resizable',"resizableProps":_vm.resizableProps}},[_c('div',{staticClass:"resizable-handle"})]):_vm._e()],1)}
-var VueGridItemvue_type_template_id_7a48b4f8_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueGridItem.vue?vue&type=template&id=7803427a&
+var VueGridItemvue_type_template_id_7803427a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.classes,style:(_vm.styles)},[_c('DraggableCore',{class:_vm.dragContainerClass,attrs:{"onStart":_vm.onDragHandler('onDragStart'),"onDrag":_vm.onDragHandler('onDrag'),"onStop":_vm.onDragHandler('onDragStop'),"disabled":!_vm.isDraggable || _vm.immobile,"handle":_vm.handle,"cancel":_vm.cancel,"noTouchAction":_vm.noTouchAction,"touchAction":_vm.touchAction,"draggableCoreProps":_vm.draggableCoreProps}},[(_vm.component)?_c(_vm.component,_vm._b({ref:"component",tag:"div",attrs:{"cols":_vm.cols,"w":_vm.w,"h":_vm.h}},'div',_vm.componentProps,false)):_vm._t("default",null,{"cols":_vm.cols,"w":_vm.w,"h":_vm.h})],2),(_vm.isResizable)?_c('Resizable',{attrs:{"w":_vm.calcWidth(),"h":_vm.calcHeight(),"onResizeStart":_vm.onResizeHandler('onResizeStart'),"onResize":_vm.onResizeHandler('onResize'),"onResizeStop":_vm.onResizeHandler('onResizeStop'),"minConstraints":_vm.minConstraints,"maxConstraints":_vm.maxConstraints,"className":'resizable',"resizableProps":_vm.resizableProps}},[_c('div',{staticClass:"resizable-handle"})]):_vm._e()],1)}
+var VueGridItemvue_type_template_id_7803427a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueGridItem.vue?vue&type=template&id=7a48b4f8&
+// CONCATENATED MODULE: ./src/components/VueGridItem.vue?vue&type=template&id=7803427a&
 
 // EXTERNAL MODULE: ./node_modules/vue-draggable-core/dist/vue-draggable-core.min.js
 var vue_draggable_core_min = __webpack_require__("fa8c");
@@ -6390,8 +6390,8 @@ function (_super) {
             w = _a.w,
             h = _a.h;
 
-        this.$emit('update:w', w);
-        this.$emit('update:h', h);
+        this.$emit("update:w", w);
+        this.$emit("update:h", h);
       }
     }
   };
@@ -6400,7 +6400,7 @@ function (_super) {
     get: function get() {
       var _a;
 
-      return _a = {}, _a[this.className] = this.className, _a['vue-grid-immobile'] = this.immobile, _a['vue-grid-resizable'] = this.isResizable, _a['vue-grid-resizable-resizing'] = Boolean(this.resizing), _a['vue-grid-draggable'] = this.isDraggable, _a['vue-grid-draggable-dragging'] = Boolean(this.dragging), _a['cssTransforms'] = this.useCSSTransforms, _a;
+      return _a = {}, _a[this.className] = this.className, _a["vue-grid-immobile"] = this.immobile, _a["vue-grid-resizable"] = this.isResizable, _a["vue-grid-resizable-resizing"] = Boolean(this.resizing), _a["vue-grid-draggable"] = this.isDraggable, _a["vue-grid-draggable-dragging"] = Boolean(this.dragging), _a.cssTransforms = this.useCSSTransforms, _a;
     },
     enumerable: true,
     configurable: true
@@ -6442,7 +6442,7 @@ function (_super) {
       return __generator(this, function (_a) {
         if (this.placeholder === false) {
           this.isMounted = true;
-          this.eventBus.$emit('addChild', this);
+          this.eventBus.$emit("addChild", this);
 
           if (this.heightFromChildren) {
             if (this.component) {
@@ -6453,7 +6453,10 @@ function (_super) {
             } else if (this.$slots.default[0]) {
               this.componentHeight = this.$slots.default[0].elm.offsetHeight;
               new MutationObserver(this.heightObserver).observe(this.$slots.default[0].elm, {
-                attributes: true
+                attributes: true,
+                childList: true,
+                characterData: true,
+                subtree: true
               });
             }
           } else {
@@ -6471,12 +6474,35 @@ function (_super) {
   };
 
   GridItem.prototype.heightObserver = function (mutationsList, observer) {
+    var _this = this;
+
+    console.log("observe");
+
     for (var _i = 0, mutationsList_1 = mutationsList; _i < mutationsList_1.length; _i++) {
       var mutation = mutationsList_1[_i];
 
-      if (mutation.type === 'attributes') {
-        if (this.componentHeight !== mutation.target.offsetHeight) {
-          this.componentHeight = mutation.target.offsetHeight;
+      if (["attributes", "characterData", "childList", "subtree"].indexOf(mutation.type) > -1) {
+        var newHeight = this.$slots.default[0].elm.clientHeight;
+
+        if (this.componentHeight !== newHeight) {
+          this.componentHeight = newHeight;
+          this.$nextTick(function () {
+            var pos = _this.calcPosition(_this.x, _this.y, _this.w, _this.h);
+
+            var _a = _this.calcWH({
+              height: _this.componentHeight,
+              width: pos.width
+            }),
+                w = _a.w,
+                h = _a.h;
+
+            _this.resizing = null;
+
+            _this.eventBus.$emit("onResizeStop", _this, _this.i, w, h, {
+              e: null,
+              node: null
+            });
+          });
         }
       }
     }
@@ -6487,7 +6513,7 @@ function (_super) {
       return __generator(this, function (_a) {
         if (this.placeholder === false) {
           this.isMounted = false;
-          this.eventBus.$emit('removeChild', this);
+          this.eventBus.$emit("removeChild", this);
         }
 
         return [2
@@ -6610,7 +6636,7 @@ function (_super) {
       };
 
       switch (handlerName) {
-        case 'onDragStart':
+        case "onDragStart":
           {
             var offsetParent = node.offsetParent.offsetParent;
 
@@ -6629,9 +6655,9 @@ function (_super) {
             break;
           }
 
-        case 'onDrag':
+        case "onDrag":
           if (!_this.dragging) {
-            throw new Error('onDrag called before onDragStart.');
+            throw new Error("onDrag called before onDragStart.");
           }
 
           newPosition.left = _this.dragging.left + deltaX;
@@ -6642,9 +6668,9 @@ function (_super) {
           };
           break;
 
-        case 'onDragStop':
+        case "onDragStop":
           if (!_this.dragging) {
-            throw new Error('onDragEnd called before onDragStart.');
+            throw new Error("onDragEnd called before onDragStart.");
           }
 
           newPosition.left = _this.dragging.left;
@@ -6653,7 +6679,7 @@ function (_super) {
           break;
 
         default:
-          throw new Error('onDragHandler called with unrecognized handlerName: ' + handlerName);
+          throw new Error("onDragHandler called with unrecognized handlerName: " + handlerName);
       }
 
       var newPos = _this.calcXY(newPosition.top, newPosition.left);
@@ -6694,7 +6720,7 @@ function (_super) {
       w = Math.max(w, 1);
       w = Math.max(Math.min(w, maxW), minW);
       h = Math.max(Math.min(h, maxH), minH);
-      _this.resizing = handlerName === 'onResizeStop' ? null : size;
+      _this.resizing = handlerName === "onResizeStop" ? null : size;
 
       _this.eventBus.$emit(handlerName, _this, i, w, h, {
         e: e,
@@ -6841,25 +6867,25 @@ function (_super) {
   __decorate([Prop({
     required: false,
     type: String,
-    default: 'vue-grid-item'
+    default: "vue-grid-item"
   })], GridItem.prototype, "className", void 0);
 
   __decorate([Prop({
     required: false,
     type: String,
-    default: 'vue-grid-draggable-container'
+    default: "vue-grid-draggable-container"
   })], GridItem.prototype, "dragContainerClass", void 0);
 
   __decorate([Prop({
     required: false,
     type: String,
-    default: ''
+    default: ""
   })], GridItem.prototype, "handle", void 0);
 
   __decorate([Prop({
     required: false,
     type: String,
-    default: ''
+    default: ""
   })], GridItem.prototype, "cancel", void 0);
 
   __decorate([Prop({
@@ -6895,7 +6921,7 @@ function (_super) {
 
   __decorate([Prop({
     type: String,
-    default: 'none'
+    default: "none"
   })], GridItem.prototype, "touchAction", void 0);
 
   __decorate([Prop({
@@ -6910,15 +6936,15 @@ function (_super) {
     default: false
   })], GridItem.prototype, "placeholder", void 0);
 
-  __decorate([Watch('componentHeight')], GridItem.prototype, "onComponentHeightChanged", null);
+  __decorate([Watch("componentHeight")], GridItem.prototype, "onComponentHeightChanged", null);
 
   GridItem = __decorate([vue_class_component_common_default()({
-    name: 'VueGridItem',
+    name: "VueGridItem",
     components: {
       DraggableCore: vue_draggable_core_min_default.a,
       Resizable: vue_resizable_core_min_default.a
     },
-    inject: ['eventBus'],
+    inject: ["eventBus"],
     data: function data() {
       return {
         eventBus: this.eventBus
@@ -7036,8 +7062,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_VueGridItemvue_type_script_lang_ts_,
-  VueGridItemvue_type_template_id_7a48b4f8_render,
-  VueGridItemvue_type_template_id_7a48b4f8_staticRenderFns,
+  VueGridItemvue_type_template_id_7803427a_render,
+  VueGridItemvue_type_template_id_7803427a_staticRenderFns,
   false,
   null,
   null,
@@ -8116,4 +8142,4 @@ module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u20
 
 /******/ });
 });
-//# sourceMappingURL=vue-responsive-grid-layout.umd.js.map
+//# sourceMappingURL=vue-dynamic-grids.umd.js.map

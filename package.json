@@ -1,16 +1,16 @@
 {
-  "name": "vue-responsive-grid-layout",
-  "version": "1.2.0",
+  "name": "vue-dynamic-grids",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-modern": "vue-cli-service build --modern",
-    "build-modern-lib": "vue-cli-service build --modern --target lib --name vue-responsive-grid-layout ./src/components/index.ts",
-    "build-modern-wc": "vue-cli-service build --modern --target wc --name vue-responsive-grid-layout ./src/components/*.vue",
-    "build-modern-wc-async": "vue-cli-service build --modern --target wc-async --name vue-responsive-grid-layout ./src/components/*.vue",
-    "build-lib": "vue-cli-service build --target lib --name vue-responsive-grid-layout ./src/components/index.ts",
-    "build-wc": "vue-cli-service build --target wc --name vue-responsive-grid-layout ./src/components/*.vue",
-    "build-wc-async": "vue-cli-service build --target wc-async --name vue-responsive-grid-layout ./src/components/*.vue",
+    "build-modern-lib": "vue-cli-service build --modern --target lib --name vue-dynamic-grids ./src/components/index.ts",
+    "build-modern-wc": "vue-cli-service build --modern --target wc --name vue-dynamic-grids ./src/components/*.vue",
+    "build-modern-wc-async": "vue-cli-service build --modern --target wc-async --name vue-dynamic-grids ./src/components/*.vue",
+    "build-lib": "vue-cli-service build --target lib --name vue-dynamic-grids ./src/components/index.ts",
+    "build-wc": "vue-cli-service build --target wc --name vue-dynamic-grids ./src/components/*.vue",
+    "build-wc-async": "vue-cli-service build --target wc-async --name vue-dynamic-grids ./src/components/*.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -26,8 +26,8 @@
     "*.js",
     "types/*"
   ],
-  "main": "./dist/vue-responsive-grid-layout.common.js",
-  "unpkg": "./dist/vue-responsive-grid-layout.umd.min.js",
+  "main": "./dist/vue-dynamic-grids.common.js",
+  "unpkg": "./dist/vue-dynamic-grids.umd.min.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.1",
     "@vue/cli-plugin-typescript": "^3.4.1",
@@ -40,19 +40,22 @@
     "vuex": "^3.1.0",
     "vuex-class": "^0.3.1"
   },
-  "description": "## How to use: 1. Just use `npm install --save vue-responsive-grid-layout` 2. Use the components in your file directly.",
-  "author": "Łukasz Rembacz",
+  "description": "## How to use: 1. Just use `npm install --save vue-dynamic-grids` 2. Use the components in your file directly.",
+  "author": "Salih Baki Sayer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lrembacz/vue-responsive-grid-layout.git"
+    "url": "https://github.com/sabasayer/vue-dynamic-grids.git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "types": "types/components/index.d.ts",
-  "homepage": "https://github.com/lrembacz/vue-responsive-grid-layout#readme",
+  "homepage": "https://github.com/sabasayer/vue-dynamic-grids#readme",
   "license": "MIT",
   "keywords": [
     "vue",
     "grid-layout",
     "responsive",
-    "vue-responsive-grid-layout"
+    "vue-responsive-grid-layout",
+    "dynamic-grids",
+    "grid"
   ]
 }
