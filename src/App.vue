@@ -32,7 +32,13 @@
           :maxRows="props.maxRows"
         >
           <div>
-            asdasd
+            aw daw wda wda 
+            wdawdawdawda wdawdawdawdawda 
+            wda 
+             wda
+              wda
+               wda
+                wda wdawdawda
           </div>
         </VueGridItem>
       </template>

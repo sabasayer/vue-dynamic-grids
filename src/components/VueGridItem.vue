@@ -380,14 +380,19 @@ export default class GridItem extends Vue {
       this.eventBus.$emit("addChild", this);
       if (this.heightFromChildren) {
         if (this.component) {
+          console.log("if component");
           this.componentHeight = (this.$refs.component as any).$el.offsetHeight;
           new MutationObserver(this.heightObserver).observe(
             (this.$refs.component as any).$el,
             { attributes: true }
           );
         } else if (this.$slots.default[0]) {
-          this.componentHeight = (this.$slots
-            .default[0] as any).elm.offsetHeight;
+          console.log("if slot");
+
+          this.$nextTick(() => {
+            this.componentHeight = (this.$slots
+              .default[0] as any).elm.offsetHeight;
+          });
 
           new MutationObserver(this.heightObserver).observe(
             (this.$slots.default[0] as any).elm,
