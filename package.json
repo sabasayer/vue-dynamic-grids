@@ -1,5 +1,5 @@
 {
-  "name": "vue-dynamic-grids",
+  "name": "@sabasayer/vue-dynamic-grids",
   "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
